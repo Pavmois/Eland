@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Flame-Hardcore</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+<body>
+    <main class="container">
+        <div class="cover">
+            <div id="cursor"></div>
+            <div class="cover__image"></div>
+            <h1 class="cover__heading">Eland.ru</h1>
+        </div>
+        <div class="block">
+
+            <div class="anima">
+                <canvas id="canvas"></canvas>
+            </div>
+            
+            <form novalidate class="form" name="register" action="http://eland.ru" method="POST">
+                <h3 style="margin-left: 10px;">Как с Вами связаться?</h3>
+                <fieldset class="form__fieldset">
+                    <div class="form__field">
+                        <input class="form__input" type="text" minlength="2" maxlength="20" name="name" pattern="[А-ЯЁ][а-яё]+(-[А-ЯЁ][а-яё]+)?" placeholder="Имя" required />
+                    </div>
+                    <div class="form__field">
+                        <input class="form__input" type="email" name="name" pattern="[\w-]+@[\w-]+\.[\w-]+" placeholder="E-Mail" />
+                        <span class="form__error">e-mail в формате: ivanov@mail.ru</span>
+                    </div> 
+                    <div class="form__field">
+                        <input class="form__input" type="tel" name="name" placeholder="Телефон" pattern="(\+7|8)(\s?|\()(\d{3})(\s?|\))(\s?|-)(\d{7}|\d{3}-\d{2}-\d{2})" minlength="" maxlength="" />
+                        <span class="form__error">телефон в формате: (+7/8)123-456-78-90</span>
+                    </div>
+                    <button class="form__button" type="submit">Брифанёмся?</button>
+                </fieldset>
+            </form>
+        </div>
+    </main>
+    <script type="text/javascript" src="./index.js"></script>
+</body>
+</html>

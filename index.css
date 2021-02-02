@@ -1,0 +1,127 @@
+@keyframes errors {
+    from {
+      margin-top: -5px;
+      opacity: .1; 
+    }
+  
+    to {
+      margin-top: 10px;
+      opacity: 1;
+    }
+}
+
+html {
+    font-family: Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    background-color: #ffffff;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.container {
+    margin: -10px;
+    background-color:#837f7f;
+    margin-top: 200px;
+}
+
+.block {
+    margin-top: 60px;
+    border-radius: 3px;
+    display: flex;
+    flex-direction: raw;
+  }
+
+.anima {
+    max-height: 350px;
+    width: 75%;
+    left: 0;
+    top: 0;
+    overflow: hidden;
+}
+
+.form {
+    width: 25%;
+}
+
+.cover {
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+  }
+
+.cover__image {
+    width: 110px;
+    height: 110px;
+    margin-left: 10px;
+    background-image: url(./navbar-logo.png);
+    background-size: cover;
+    background-position: center;
+    border-radius: 50%;
+
+}
+  
+.cover__heading {
+    margin-left: 30px;
+    font-size: 2.5em;
+    line-height: 1;
+}
+
+.form__field {
+    margin-bottom: 36px;
+    max-width: 90%;
+    margin: 10px;
+    margin-bottom: 30px;
+}
+
+.form__fieldset {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+.form__error {
+    display: none;
+    position: absolute;
+    margin-top: 10px;
+	color: #ffffff;
+	text-align: left;
+	font-size: 14px;
+    animation: errors .1s ease-in-out;
+}
+
+.form__input {
+    display: block;
+    width: 100%;
+    border: none;
+	border-radius: 2px;
+	border-bottom: 2px solid #ccc;
+	padding: 10px 0;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.form__button {
+    width: 200px;
+    height: 48px;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 3px;
+    border: none;
+    border-radius: 10%;
+    text-align: center;
+    cursor: pointer;
+	background-color: #76fc7c;
+    color: rgb(255, 255, 255);
+    margin-left: 10px;
+}
+
+.form__input:invalid:not(:placeholder-shown) + .form__error {
+	display: block;
+}
+
+
+  
